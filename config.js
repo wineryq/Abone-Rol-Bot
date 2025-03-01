@@ -13,8 +13,8 @@ module.exports = {
   authorizedRoleIds: ["1336796044398166136"], // Array of role IDs that can approve/reject
   
   // Emoji configuration
-  approveEmoji: "1215301591293239377", // Emoji for approval
-  rejectEmoji: "1215301538277367858", // Emoji for rejection
+  approveEmoji: "👍", // Emoji for approval
+  rejectEmoji: "👎", // Emoji for rejection
   
   // Messages
   approveMessage: "Abone rolün verildi!",
