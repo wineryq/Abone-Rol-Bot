@@ -1,0 +1,22 @@
+{
+  "name": "discord-subscriber-role-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for managing subscriber roles through emoji reactions",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "croxydb": "^0.0.7",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

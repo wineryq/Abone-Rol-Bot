@@ -1,38 +1,47 @@
-﻿# Türkçe Discord Abone Rol Botu Winery Tarafından Yapıldı.
+# Discord Subscriber Role Bot
 
-Bu Discord botu, sunucunuzda abone rol yönetimi ve fotoğraf kanalı kontrolü sağlar.
-Botu satmak yasaktır. Satıldığı zaman MIT tarafından işlem uygulanır.
+# Made By Winery
 
-## Özellikler
+A Discord bot that manages subscriber roles through emoji reactions on photos.
 
-- **Abone Rol Sistemi**: Fotoğraf onaylandığında kullanıcıya otomatik rol verilir
-- **Fotoğraf Kanalı Kontrolü**: Belirtilen kanala sadece fotoğraf yüklenebilir
-- **Bildirim Sistemi**: Rol verildiğinde hem kanalda hem de DM üzerinden bildirim gönderilir
+## Features
 
-## Kurulum
+- Automatically adds approval/rejection emojis to photos in a configured channel
+- Authorized roles can approve or reject subscription requests
+- Assigns roles to approved subscribers
+- Sends DM notifications to users when approved or rejected
 
-1. Repoyu klonlayın
-2. `npm install` komutunu çalıştırarak bağımlılıkları yükleyin
-3. `.env.example` dosyasını `.env` olarak kopyalayın ve gerekli bilgileri doldurun:
-   - `TOKEN`: Discord bot token'ınız
-   - `SUBSCRIBER_ROLE_ID`: Abone rolünün ID'si
-   - `PHOTO_CHANNEL_ID`: Fotoğraf kanalının ID'si
-4. `npm start` komutu ile botu başlatın
+## Setup
 
-## Komutlar
+1. Create a Discord bot on the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Invite the bot to your server with the necessary permissions
+3. Configure the bot by editing the `config.js` file:
+   - Add your channel ID where photos will be monitored
+   - Add the role ID to be assigned to subscribers
+   - Add the authorized role IDs that can approve/reject
+4. Create a `.env` file with your bot token:
+   ```
+   TOKEN=your_discord_bot_token
+   ```
+5. Install dependencies:
+   ```
+   npm install
+   ```
+6. Start the bot:
+   ```
+   npm start
+   ```
 
-- `!yardım`: Komut listesini gösterir
-- `!abone`: Abone rol sistemini açıklar
-- `!bilgi`: Bot hakkında bilgi verir
+## Usage
 
-## Nasıl Çalışır?
+1. Type "setup" in any channel to verify the bot configuration
+2. Users post photos in the configured channel
+3. The bot automatically adds approval and rejection emojis
+4. Authorized users can click on these emojis to approve or reject the subscription
+5. Approved users receive the configured role and a DM notification
 
-1. Kullanıcı belirlenen kanala bir fotoğraf yükler
-2. Bot otomatik olarak fotoğrafa ✅ emojisi ekler
-3. Yetkili kişi ✅ emojisine tıkladığında kullanıcıya abone rolü verilir
-4. Kullanıcı hem kanalda hem de DM üzerinden bilgilendirilir
+## Requirements
 
-## Gereksinimler
-
-- Node.js v16.9.0 veya daha yüksek
+- Node.js v20 or higher
 - Discord.js v14
+- CroxyDB for data storage
